@@ -1,0 +1,249 @@
+points:
+  zones:
+    matrix:
+      columns:
+        pinky:
+          rows:
+            bottom:
+              bind: [0, 5, 0, 0]
+              shift: [-19, 24]
+            top:
+              bind: [0, 5, 5, 0]
+          key:
+            column_net: P4
+        ring:
+          stagger: 22
+          rows:
+            top:
+              bind: [0, 5, 5, 0]
+            home:
+              bind: [0, 5, 5, 0]
+            bottom:
+              bind: [0, 0, 0, 5]
+          key:
+            column_net: P5
+        middle:
+          stagger: 7
+          rows:
+            top:
+              bind: [0, 0, 5, 0]
+            home:
+              bind: [0, 0, 5, 0]
+            bottom:
+              bind: [0, 5, 0, 5]
+          key:
+            column_net: P7
+        index:
+          stagger: -7
+          rows:
+            top:
+              bind: [0, 0, 5, 5]
+            home:
+              bind: [0, 0, 5, 5]
+          key:
+            column_net: P8
+        inner:
+          rows:
+            top:
+              bind: [0, 0, 5, 5]
+            home:
+              bind: [0, 0, 5, 5]
+            bottom:
+              bind: [0, 0, 0, 5]
+          key:
+            column_net: P1
+      rows:
+        bottom:
+          row_net: P16
+          mirror:
+            row_net: P9
+        home:
+          row_net: P15
+          mirror:
+            row_net: P6
+        top:
+          row_net: P20
+          mirror:
+            row_net: P2
+    switch_footprints:
+      extends: matrix
+      columns:
+        pinky:
+          rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,3]
+        ring:
+          rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,4]
+            bottom:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,7]
+        middle:
+          rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-4]
+            top:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-7]
+        inner:
+          rows:
+            top:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-4]
+      key:
+        footprints: &quad
+          mx:
+            type: mx
+            nets:
+              from: '!colrow'
+              to: '!column_net'
+          alps:
+            type: alps
+            nets:
+              from: '!colrow'
+              to: '!column_net'
+          choc:
+            type: choc
+            nets:
+              from: '!colrow'
+              to: '!column_net'
+          diode:
+            type: diode
+            anchor:
+              rotate: 90
+              shift: [8.25, 0]
+            nets:
+              from: '!colrow'
+              to: '!row_net'
+        mirror:
+          footprints: &quad_mirror
+            mx:
+              nets:
+                from: '!column_net'
+                to: '!colrow'
+            alps:
+              nets:
+                from: '!column_net'
+                to: '!colrow'
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [0, -19]
+      columns:
+        near:
+          rows:
+            thumb:
+              bind: [5, 0, 0, 0]
+              column_net: P7
+        home:
+          rows:
+            thumb:
+              column_net: P8
+        far:
+          rows:
+            thumb:
+              bind: [5, 0, 0, 0]
+              shift: [-5, -19]
+              column_net: P1
+              footprints:
+                diode:
+                  anchor:
+                    rotate: 180
+                    shift: [0, 8.25]
+      rows:
+        thumb:
+          row_net: P10
+          mirror:
+            row_net: P19
+      key:
+        footprints: *quad
+        mirror: *quad_mirror
+  rotate: -25
+  mirror:
+    ref: matrix_inner_top
+    shift: [7.2, 7.2]
+    distance: 11 # Just enough for mini-USB-to-USB-C adapater to pass
+outlines:
+  glue:
+    default:
+      top:
+        left:
+          ref: thumbfan_home_thumb
+          shift: [0.5, 0.5]
+        right:
+          ref: mirror_thumbfan_home_thumb
+          shift: [0.5, 0.5]
+      bottom:
+        left:
+          ref: thumbfan_home_thumb
+          shift: [0.5, -0.5]
+        right:
+          ref: mirror_thumbfan_home_thumb
+          shift: [0.5, -0.5]
+  exports:
+    _more_glue:
+      - type: polygon
+        points:
+          - ref: matrix_inner_top
+            shift: [7.2, 7.2]
+          - ref: thumbfan_near_thumb
+            shift: [7.2, -7.2]
+          - ref: thumbfan_far_thumb
+            shift: [7.2, 11.8]
+          - ref: mirror_thumbfan_far_thumb
+            shift: [7.2, 11.8]
+          - ref: mirror_thumbfan_near_thumb
+            shift: [7.2, -7.2]
+          - ref: mirror_matrix_inner_top
+            shift: [7.2, 7.2]
+          - ref: [matrix_inner_top, mirror_matrix_inner_top]
+            shift: [5.5, -18.65]
+          - ref: [matrix_inner_top, mirror_matrix_inner_top]
+            shift: [-5.5, -18.65]
+    _pcb_edge:
+      - operation: add
+        type: keys
+        side: both
+        size: [14.4, 14.4] # MX switch dimensions
+      - operation: add
+        type: outline
+        name: _more_glue
+    mockup:
+      - operation: add
+        type: outline
+        name: _pcb_edge
+      - operation: stack
+        type: keys
+        side: both
+        size: [14.4, 14.4] # MX switch dimensions
+        bound: false
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: _pcb_edge
+    footprints:
+      mcu:
+        type: promicro
+        anchor:
+          ref:
+            - matrix_inner_bottom
+            - mirror_matrix_inner_bottom
+          rotate: 270
+          shift: [0, -2]
