@@ -1,0 +1,3 @@
+[submodule "ergogen"]
+	path = ergogen
+	url = git@github.com:brow/ergogen.git
