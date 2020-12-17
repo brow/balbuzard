@@ -17,3 +17,9 @@ make
 Find the generated PCB at `output/pcbs/main.kicad_pcb`.
 
 ![pcb thumbnail image](images/pcb.png)
+
+## How do you type on that?
+
+My keymap looks like this. The colors indicate which finger I use to hit each key.
+
+![example keymap](images/layout.png)
