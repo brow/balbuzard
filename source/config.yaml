@@ -107,17 +107,7 @@ points:
                   anchor:
                     shift: [,-4]
       key:
-        footprints: &quad
-          mx:
-            type: mx
-            nets:
-              from: '!colrow'
-              to: '!column_net'
-          alps:
-            type: alps
-            nets:
-              from: '!colrow'
-              to: '!column_net'
+        footprints: &footprints
           choc:
             type: choc
             nets:
@@ -131,16 +121,6 @@ points:
             nets:
               from: '!colrow'
               to: '!row_net'
-        mirror:
-          footprints: &quad_mirror
-            mx:
-              nets:
-                from: '!column_net'
-                to: '!colrow'
-            alps:
-              nets:
-                from: '!column_net'
-                to: '!colrow'
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -172,8 +152,7 @@ points:
           mirror:
             row_net: P19
       key:
-        footprints: *quad
-        mirror: *quad_mirror
+        footprints: *footprints
   rotate: -25
   mirror:
     ref: matrix_inner_top
