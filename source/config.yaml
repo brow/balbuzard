@@ -6,13 +6,14 @@ points:
           rows:
             bottom:
               bind: [0, 5, 0, 0]
-              shift: [-19, 24]
+              shift: [-18, 24]
             top:
               bind: [0, 5, 5, 0]
           key:
             column_net: P4
         ring:
-          stagger: 22
+          spread: 18
+          stagger: 24
           rows:
             top:
               bind: [0, 5, 5, 0]
@@ -23,6 +24,7 @@ points:
           key:
             column_net: P5
         middle:
+          spread: 18
           stagger: 7
           rows:
             top:
@@ -34,6 +36,7 @@ points:
           key:
             column_net: P7
         index:
+          spread: 18
           stagger: -7
           rows:
             top:
@@ -43,6 +46,7 @@ points:
           key:
             column_net: P8
         inner:
+          spread: 18
           rows:
             top:
               bind: [0, 0, 5, 5]
@@ -65,6 +69,8 @@ points:
           row_net: P20
           mirror:
             row_net: P2
+      key:
+        padding: 17
     switch_footprints:
       extends: matrix
       columns:
@@ -76,6 +82,7 @@ points:
                   anchor:
                     shift: [,3]
         ring:
+          spread: 18
           rows:
             home:
               footprints:
@@ -88,6 +95,7 @@ points:
                   anchor:
                     shift: [,7]
         middle:
+          spread: 18
           rows:
             home:
               footprints:
@@ -99,6 +107,8 @@ points:
                 diode:
                   anchor:
                     shift: [,-7]
+        index:
+          spread: 18
         inner:
           rows:
             top:
@@ -107,6 +117,7 @@ points:
                   anchor:
                     shift: [,-4]
       key:
+        padding: 17
         footprints: &footprints
           choc:
             type: choc
@@ -124,7 +135,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [0, -19]
+        shift: [0, -17]
       columns:
         near:
           rows:
@@ -132,14 +143,16 @@ points:
               bind: [5, 0, 0, 0]
               column_net: P7
         home:
+          spread: 18
           rows:
             thumb:
               column_net: P8
         far:
+          spread: 18
           rows:
             thumb:
               bind: [5, 0, 0, 0]
-              shift: [-5, -19]
+              shift: [-5, -17]
               column_net: P1
               footprints:
                 diode:
@@ -152,6 +165,7 @@ points:
           mirror:
             row_net: P19
       key:
+        padding: 17
         footprints: *footprints
   rotate: -25
   mirror:
@@ -184,9 +198,9 @@ outlines:
           - ref: thumbfan_near_thumb
             shift: [7.2, -7.2]
           - ref: thumbfan_far_thumb
-            shift: [7.2, 11.8]
+            shift: [7.2, 9.8]
           - ref: mirror_thumbfan_far_thumb
-            shift: [7.2, 11.8]
+            shift: [7.2, 9.8]
           - ref: mirror_thumbfan_near_thumb
             shift: [7.2, -7.2]
           - ref: mirror_matrix_inner_top
