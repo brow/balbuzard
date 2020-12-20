@@ -135,7 +135,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_index_bottom
-        shift: [0, -17]
+        shift: [3, -17]
       columns:
         nearer:
           rows:
@@ -158,7 +158,7 @@ points:
           rows:
             thumb:
               bind: [5, 0, 0, 0]
-              shift: [-5, -17]
+              shift: [-6, -17]
               column_net: P1
               footprints:
                 diode:
