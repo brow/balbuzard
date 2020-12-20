@@ -134,10 +134,16 @@ points:
               to: '!row_net'
     thumbfan:
       anchor:
-        ref: matrix_inner_bottom
+        ref: matrix_index_bottom
         shift: [0, -17]
       columns:
+        nearer:
+          rows:
+            thumb:
+              bind: [5, 0, 0, 0]
+              column_net: P5
         near:
+          spread: 18
           rows:
             thumb:
               bind: [5, 0, 0, 0]
@@ -195,14 +201,18 @@ outlines:
         points:
           - ref: matrix_inner_top
             shift: [7.2, 7.2]
-          - ref: thumbfan_near_thumb
+          - ref: matrix_index_bottom
+            shift: [7.2, 7.2]
+          - ref: thumbfan_nearer_thumb
             shift: [7.2, -7.2]
           - ref: thumbfan_far_thumb
             shift: [7.2, 9.8]
           - ref: mirror_thumbfan_far_thumb
             shift: [7.2, 9.8]
-          - ref: mirror_thumbfan_near_thumb
+          - ref: mirror_thumbfan_nearer_thumb
             shift: [7.2, -7.2]
+          - ref: mirror_matrix_index_bottom
+            shift: [7.2, 7.2]
           - ref: mirror_matrix_inner_top
             shift: [7.2, 7.2]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
