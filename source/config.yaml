@@ -4,16 +4,18 @@ points:
       columns:
         pinky:
           rows:
-            bottom:
-              bind: [0, 5, 0, 0]
-              shift: [-18, 24]
             top:
-              bind: [0, 5, 5, 0]
+              shift: [-18, -24]
+              bind: [0, 5, 0, 0]
+            home:
+              bind: [0, 5, 0, 0]
+            bottom:
+              bind: [5, 0, 0, 0]
           key:
             column_net: P4
         ring:
           spread: 18
-          stagger: 24
+          stagger: 7
           rows:
             top:
               bind: [0, 5, 5, 0]
