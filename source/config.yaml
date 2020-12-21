@@ -202,21 +202,21 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_inner_top
-            shift: [7.2, 7.2]
+            shift: [6.85, 6.85]
           - ref: matrix_index_bottom
-            shift: [7.2, 7.2]
+            shift: [6.85, 6.85]
           - ref: thumbfan_nearer_thumb
-            shift: [7.2, -7.2]
+            shift: [6.85, -6.85]
           - ref: thumbfan_far_thumb
-            shift: [7.2, 9.8]
+            shift: [6.85, 10.15]
           - ref: mirror_thumbfan_far_thumb
-            shift: [7.2, 9.8]
+            shift: [6.85, 10.15]
           - ref: mirror_thumbfan_nearer_thumb
-            shift: [7.2, -7.2]
+            shift: [6.85, -6.85]
           - ref: mirror_matrix_index_bottom
-            shift: [7.2, 7.2]
+            shift: [6.85, 6.85]
           - ref: mirror_matrix_inner_top
-            shift: [7.2, 7.2]
+            shift: [6.85, 6.85]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
             shift: [5.5, -18.65]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
@@ -225,7 +225,7 @@ outlines:
       - operation: add
         type: keys
         side: both
-        size: [14.4, 14.4] # MX switch dimensions
+        size: [13.7, 13.7] # Choc footprint
       - operation: add
         type: outline
         name: _more_glue
@@ -236,7 +236,7 @@ outlines:
       - operation: stack
         type: keys
         side: both
-        size: [14.4, 14.4] # MX switch dimensions
+        size: [13.7, 13.7] # Choc footprint
         bound: false
 pcbs:
   main:
