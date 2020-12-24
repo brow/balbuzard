@@ -5,7 +5,7 @@ points:
         pinky:
           rows:
             top:
-              shift: [-18, -24]
+              shift: [-18, -20]
               bind: [0, 5, 0, 0]
             home:
               bind: [0, 5, 0, 0]
