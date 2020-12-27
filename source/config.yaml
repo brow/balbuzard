@@ -209,9 +209,9 @@ outlines:
           - ref: mirror_matrix_inner_top
             shift: [6.85, 6.85]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
-            shift: [5.5, -18.65]
+            shift: [5.5, -17.65]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
-            shift: [-5.5, -18.65]
+            shift: [-5.5, -17.65]
     _pcb_edge:
       - operation: add
         type: keys
@@ -242,4 +242,4 @@ pcbs:
             - matrix_inner_bottom
             - mirror_matrix_inner_bottom
           rotate: 270
-          shift: [0, -2]
+          shift: [0, -1]
