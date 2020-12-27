@@ -179,42 +179,32 @@ points:
   rotate: -25
   mirror:
     ref: matrix_inner_top
-    shift: [7.2, 7.2]
+    shift: [6.85, 6.85]
     distance: 11 # Just enough for mini-USB-to-USB-C adapater to pass
 outlines:
   glue:
     default:
       top:
         left:
-          ref: matrix_inner_bottom
+          ref: matrix_inner_top
           shift: [0.5, 0.5]
         right:
-          ref: mirror_matrix_inner_bottom
+          ref: mirror_matrix_inner_top
           shift: [0.5, 0.5]
       bottom:
         left:
-          ref: matrix_inner_bottom
-          shift: [0.5, -0.5]
+          ref: thumbfan_nearer_thumb
+          shift: [-0.5, 0.4]
+          rotate: 90
         right:
-          ref: mirror_matrix_inner_bottom
-          shift: [0.5, -0.5]
+          ref: mirror_thumbfan_nearer_thumb
+          shift: [-0.5, 0.4]
+          rotate: -90
   exports:
-    _more_glue:
+    _notch:
       - type: polygon
         points:
           - ref: matrix_inner_top
-            shift: [6.85, 6.85]
-          - ref: matrix_index_bottom
-            shift: [6.85, 6.85]
-          - ref: thumbfan_nearer_thumb
-            shift: [-6.85, -6.85]
-          - ref: thumbfan_far_thumb
-            shift: [11, -11]
-          - ref: mirror_thumbfan_far_thumb
-            shift: [11, -11]
-          - ref: mirror_thumbfan_nearer_thumb
-            shift: [-6.85, -6.85]
-          - ref: mirror_matrix_index_bottom
             shift: [6.85, 6.85]
           - ref: mirror_matrix_inner_top
             shift: [6.85, 6.85]
@@ -227,9 +217,9 @@ outlines:
         type: keys
         side: both
         size: [13.7, 13.7] # Choc footprint
-      - operation: add
+      - operation: subtract
         type: outline
-        name: _more_glue
+        name: _notch
     mockup:
       - operation: add
         type: outline
