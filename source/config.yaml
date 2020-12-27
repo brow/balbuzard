@@ -236,7 +236,7 @@ outlines:
       - operation: stack
         type: keys
         side: both
-        size: [13.7, 13.7] # Choc footprint
+        size: [17.5, 16.5] # MBK keycap
         bound: false
 pcbs:
   main:
