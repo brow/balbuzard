@@ -138,30 +138,29 @@ points:
     thumbfan:
       anchor:
         ref: matrix_index_bottom
-        shift: [3, -17]
+        shift: [6, -17.5]
       columns:
         nearer:
           rows:
             thumb:
-              bind: [5, 0, 0, 0]
+              bind: [0, 5, 0, 0]
               column_net: P5
         near:
-          spread: 18
+          spread: 17
           rows:
             thumb:
-              bind: [5, 0, 0, 0]
               column_net: P7
         home:
-          spread: 18
+          spread: 17
           rows:
             thumb:
               column_net: P8
         far:
-          spread: 18
+          spread: 17
           rows:
             thumb:
-              bind: [5, 0, 0, 0]
-              shift: [-6, -17]
+              bind: [0, 5, 0, 0]
+              shift: [-6, -18]
               column_net: P1
               footprints:
                 diode:
@@ -174,6 +173,7 @@ points:
           mirror:
             row_net: P19
       key:
+        rotate: 90
         padding: 17
         footprints: *footprints
   rotate: -25
@@ -186,17 +186,17 @@ outlines:
     default:
       top:
         left:
-          ref: thumbfan_home_thumb
+          ref: matrix_inner_bottom
           shift: [0.5, 0.5]
         right:
-          ref: mirror_thumbfan_home_thumb
+          ref: mirror_matrix_inner_bottom
           shift: [0.5, 0.5]
       bottom:
         left:
-          ref: thumbfan_home_thumb
+          ref: matrix_inner_bottom
           shift: [0.5, -0.5]
         right:
-          ref: mirror_thumbfan_home_thumb
+          ref: mirror_matrix_inner_bottom
           shift: [0.5, -0.5]
   exports:
     _more_glue:
@@ -207,13 +207,13 @@ outlines:
           - ref: matrix_index_bottom
             shift: [6.85, 6.85]
           - ref: thumbfan_nearer_thumb
-            shift: [6.85, -6.85]
+            shift: [-6.85, -6.85]
           - ref: thumbfan_far_thumb
-            shift: [6.85, 10.15]
+            shift: [11, -11]
           - ref: mirror_thumbfan_far_thumb
-            shift: [6.85, 10.15]
+            shift: [11, -11]
           - ref: mirror_thumbfan_nearer_thumb
-            shift: [6.85, -6.85]
+            shift: [-6.85, -6.85]
           - ref: mirror_matrix_index_bottom
             shift: [6.85, 6.85]
           - ref: mirror_matrix_inner_top
