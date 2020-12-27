@@ -160,7 +160,7 @@ points:
           rows:
             thumb:
               bind: [0, 5, 0, 0]
-              shift: [-6, -18]
+              shift: [-5, -18]
               column_net: P1
               footprints:
                 diode:
