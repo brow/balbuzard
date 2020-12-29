@@ -82,46 +82,14 @@ points:
       columns:
         pinky:
           rows:
-            home:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,3]
         ring:
           spread: 18
-          rows:
-            home:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,4]
-            bottom:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,7]
         middle:
           spread: 18
-          rows:
-            home:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,-4]
-            top:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,-7]
         index:
           spread: 18
         inner:
-          rows:
-            top:
-              footprints:
-                diode:
-                  anchor:
-                    shift: [,-4]
+          spread: 18
       key:
         padding: 17
         footprints: &footprints
@@ -133,8 +101,8 @@ points:
           diode:
             type: diode
             anchor:
-              rotate: 90
-              shift: [8.25, 0]
+              rotate: 180
+              shift: [0, 8.5]
             nets:
               from: '!colrow'
               to: '!row_net'
@@ -165,11 +133,6 @@ points:
               bind: [0, 5, 0, 0]
               shift: [-5, -18]
               column_net: P1
-              footprints:
-                diode:
-                  anchor:
-                    rotate: 180
-                    shift: [0, 8.25]
       rows:
         thumb:
           row_net: P10
