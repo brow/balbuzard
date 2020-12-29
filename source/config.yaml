@@ -83,13 +83,9 @@ points:
         pinky:
           rows:
         ring:
-          spread: 18
         middle:
-          spread: 18
         index:
-          spread: 18
         inner:
-          spread: 18
       key:
         padding: 17
         footprints: &footprints
