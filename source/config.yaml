@@ -215,6 +215,29 @@ outlines:
             shift: [5.5, -17.65]
           - ref: [matrix_inner_top, mirror_matrix_inner_top]
             shift: [-5.5, -17.65]
+    _perforations:
+      - type: rectangle
+        ref: matrix_pinky_top
+        shift: [-5, -10.15]
+        size: [10, 2]
+        corner: 1
+      - type: rectangle
+        ref: mirror_matrix_pinky_top
+        shift: [5, -10.15]
+        size: [10, 2]
+        corner: 1
+      - type: rectangle
+        ref: thumbfan_far_thumb
+        rotate: 90
+        shift: [11.15, -5]
+        size: [10, 2]
+        corner: 1
+      - type: rectangle
+        ref: mirror_thumbfan_far_thumb
+        rotate: -90
+        shift: [11.15, 5]
+        size: [10, 2]
+        corner: 1
     _pcb_edge:
       - operation: add
         type: keys
@@ -223,6 +246,9 @@ outlines:
       - operation: subtract
         type: outline
         name: _notch
+      - operation: subtract
+        type: outline
+        name: _perforations
     mockup:
       - operation: add
         type: outline
