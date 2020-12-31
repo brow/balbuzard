@@ -98,7 +98,7 @@ points:
             type: diode
             anchor:
               rotate: 180
-              shift: [0, 8.5]
+              shift: [0, -4]
             nets:
               from: '!colrow'
               to: '!row_net'
