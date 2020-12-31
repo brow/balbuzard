@@ -16,7 +16,9 @@ points:
           key:
             padding: 18
             rotate: 90
-            column_net: P4
+            column_net: P20
+            mirror:
+              column_net: P3
         ring:
           spread: 18
           stagger: 7
@@ -28,7 +30,9 @@ points:
             bottom:
               bind: [0, 0, 0, 5]
           key:
-            column_net: P5
+            column_net: P19
+            mirror:
+              column_net: P4
         middle:
           spread: 18
           stagger: 7
@@ -40,7 +44,9 @@ points:
             bottom:
               bind: [0, 5, 0, 5]
           key:
-            column_net: P7
+            column_net: P18
+            mirror:
+              column_net: P5
         index:
           spread: 18
           stagger: -7
@@ -50,7 +56,9 @@ points:
             home:
               bind: [0, 0, 5, 5]
           key:
-            column_net: P8
+            column_net: P15
+            mirror:
+              column_net: P6
         inner:
           spread: 18
           rows:
@@ -61,20 +69,16 @@ points:
             bottom:
               bind: [0, 0, 0, 5]
           key:
-            column_net: P1
+            column_net: P14
+            mirror:
+              column_net: P7
       rows:
         bottom:
-          row_net: P16
-          mirror:
-            row_net: P9
+          row_net: P8
         home:
-          row_net: P15
-          mirror:
-            row_net: P6
+          row_net: P21
         top:
-          row_net: P20
-          mirror:
-            row_net: P2
+          row_net: P2
       key:
         padding: 17
     switch_footprints:
@@ -97,7 +101,6 @@ points:
           diode:
             type: diode
             anchor:
-              rotate: 180
               shift: [0, -4]
             nets:
               from: '!colrow'
@@ -111,29 +114,35 @@ points:
           rows:
             thumb:
               bind: [0, 5, 0, 0]
-              column_net: P5
+              column_net: P19
+              mirror:
+                column_net: P4
         near:
           spread: 17
           rows:
             thumb:
-              column_net: P7
+              column_net: P18
+              mirror:
+                column_net: P5
         home:
           spread: 17
           rows:
             thumb:
-              column_net: P8
+              column_net: P15
+              mirror:
+                column_net: P6
         far:
           spread: 17
           rows:
             thumb:
               bind: [0, 5, 0, 0]
               shift: [-5, -18]
-              column_net: P1
+              column_net: P14
+              mirror:
+                column_net: P7
       rows:
         thumb:
-          row_net: P10
-          mirror:
-            row_net: P19
+          row_net: P16
       key:
         rotate: 90
         padding: 17
