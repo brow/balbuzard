@@ -249,3 +249,15 @@ pcbs:
             - mirror_matrix_inner_bottom
           rotate: 270
           shift: [0, -1]
+      reset:
+        type: reset
+        params:
+          side: F
+        nets:
+          from: RST
+          to: GND
+        anchor:
+          ref:
+            - thumbfan_home_thumb
+            - mirror_thumbfan_home_thumb
+          shift: [0, -5]
