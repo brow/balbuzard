@@ -101,7 +101,8 @@ points:
           diode:
             type: diode
             anchor:
-              shift: [0, -4]
+              # Kailh PG1350 data sheet says 4.7 mm from center of post to center of LED hole
+              shift: [0, -4.7]
             nets:
               from: '!colrow'
               to: '!row_net'
