@@ -174,16 +174,13 @@ outlines:
           rotate: -90
   exports:
     _notch:
-      - type: polygon
-        points:
-          - ref: matrix_inner_top
-            shift: [6.85, 6.85]
-          - ref: mirror_matrix_inner_top
-            shift: [6.85, 6.85]
-          - ref: [matrix_inner_top, mirror_matrix_inner_top]
-            shift: [5.5, -17.65]
-          - ref: [matrix_inner_top, mirror_matrix_inner_top]
-            shift: [-5.5, -17.65]
+      - type: rectangle
+        ref:
+          - matrix_inner_top
+          - mirror_matrix_inner_top
+        size: [11, 22]
+        shift: [-5.5, -16.5]
+        corner: 1
     _perforations:
       - type: rectangle
         ref: matrix_pinky_top
