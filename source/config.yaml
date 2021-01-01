@@ -178,9 +178,17 @@ outlines:
         ref:
           - matrix_inner_top
           - mirror_matrix_inner_top
-        size: [11, 22]
-        shift: [-5.5, -16.5]
-        corner: 1
+        size: [11, 20]
+        shift: [-5.5, -15]
+        corner: &corner 1
+    _window:
+      - type: rectangle
+        ref:
+          - matrix_inner_bottom
+          - mirror_matrix_inner_bottom
+        size: [11, 26]
+        shift: [-5.5, -13.5]
+        corner: *corner
     _perforations:
       - type: rectangle
         ref: matrix_pinky_top
@@ -212,6 +220,9 @@ outlines:
       - operation: subtract
         type: outline
         name: _notch
+      - operation: subtract
+        type: outline
+        name: _window
       - operation: subtract
         type: outline
         name: _perforations
