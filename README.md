@@ -4,7 +4,7 @@ Balbuzard is a compact, ergonomic keyboard with 34–38 keys.
 
 <img src="images/0.2_smores.jpg" width="500" alt="assembled Balbuzard 0.2" />
 
-_Balbuzard 0.2 built and photographed by [@smores56](https://github.com/smores56)_
+_Balbuzard 0.2 by [@smores56](https://github.com/smores56)_
 
 ## How do you type on that?
 I've used Balbuzard as my main keyboard since 2019. My keymap looks like this:
@@ -52,3 +52,9 @@ make
 Find the generated PCB at `output/pcbs/main.kicad_pcb`.
 
 ![pcb thumbnail image](images/pcb.png)
+
+## More photos
+
+<img src="images/0.2_broom.jpg" width="450"/>
+
+_Balbuzard 0.2 with optional thumbs removed, by [@davidphilipbarr](https://github.com/davidphilipbarr)_
