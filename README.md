@@ -26,6 +26,7 @@ _Mod 1_ and _Mod 2_ activate alternate layers of the keymap, which contain symbo
 - Tighter key spacing
 - Viewing window under microcontroller
 - Adjustments to positions of columns and thumb keys
+- **Firmware:** [brow/qmk_firmware@balbuzard-0.2](https://github.com/brow/qmk_firmware/tree/balbuzard-0.2)
 
 ### [0.1: Classic](https://github.com/brow/balbuzard/releases/tag/v0.1)
 
@@ -35,7 +36,7 @@ _Mod 1_ and _Mod 2_ activate alternate layers of the keymap, which contain symbo
 - Compatible with MX, Alps, and Choc (low-profile) switches
 - Through-hole diodes nestled between switches
 - Silkscreen on top
-
+- **Firmware:** [brow/qmk_firmware@balbuzard-0.1](https://github.com/brow/qmk_firmware/tree/balbuzard-0.1)
 
 ## Using this repository
 
